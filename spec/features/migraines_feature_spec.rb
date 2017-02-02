@@ -22,4 +22,17 @@ feature 'migraines' do
       expect(page).not_to have_content('No Migraines Recorded')
     end
   end
+
+  context 'recording migraines' do
+    scenario 'fill out a form to record a migraine' do
+      visit '/migraines'
+      click_link 'Record a Migraine'
+      fill_in 'Date', with: '01/01/2017'
+      select(5, :from => 'Severity')
+      click_button 'Create Migraine'
+      expect(page).to have_content('01/01/2017')
+      expect(page).to have_content(5)
+      expect(current_path).to eq('/migraines')
+    end
+  end
 end

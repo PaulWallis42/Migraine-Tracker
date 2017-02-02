@@ -1,0 +1,7 @@
+<%= form_for @migraine do |f| %>
+  <%= f.label :date %>
+  <%= f.text_field :date %>
+  <%= f.label :severity %>
+  <%= f.select('severity', 1..10) %>
+  <%= f.submit %>
+<% end %>
