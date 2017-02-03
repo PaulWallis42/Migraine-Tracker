@@ -1,5 +1,4 @@
 require 'rails_helper'
-require './app/helpers/migraines_helper.rb'
 
 feature 'migraines' do
   context 'no migraines have been recorded' do
