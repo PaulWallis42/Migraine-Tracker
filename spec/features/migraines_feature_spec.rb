@@ -10,7 +10,6 @@ feature 'migraines' do
 
 
   context 'migraines have been recorded' do
-    include MigrainesHelper
     before do
       sign_up_and_record_migraine
     end

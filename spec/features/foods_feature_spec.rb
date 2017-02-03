@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 feature 'foods' do
-  include MigrainesHelper
-
   scenario 'can not add food unless signed in' do
     visit('/')
     expect(page).to have_content('Sign in to record meals')
