@@ -1,0 +1,9 @@
+<%= form_for @food do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :food_quant, "Food Quantity" %>
+  <%= f.text_field :food_quant %>
+  <%= f.label :phen_quant, "Phenylalanine Quantity" %>
+  <%= f.text_field :phen_quant %>
+  <%= f.submit "Submit Food" %>
+<% end %>
