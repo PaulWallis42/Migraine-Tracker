@@ -25,4 +25,12 @@ module MigrainesHelper
     user2.migraines.create(date: '03/03/2003', severity: 3, phen_level: 300)
   end
 
+  def create_food
+    click_link('Log a Meal')
+    fill_in('Food', with: 'chocolate')
+    fill_in('Quantity', with: 100)
+    fill_in('Phenylalanine Quantity', with: 0.5)
+    click_button('Submit Food')
+  end
+
 end

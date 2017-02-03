@@ -17,22 +17,15 @@ feature 'foods' do
     end
 
     scenario 'users can fill in foods form' do
-      visit('/foods/new')
-      fill_in('Food', with: 'chocolate')
-      fill_in('Quantity', with: 100)
-      fill_in('Phenylalanine Quantity', with: 0.5)
-      click_button('Submit Food')
+      sign_up
+      create_food
       expect(current_path).to eq('/migraines')
     end
   end
 
   scenario 'foods are saved to the database' do
     sign_up
-    click_link('Log a Meal')
-    fill_in('Food', with: 'chocolate')
-    fill_in('Quantity', with: 100)
-    fill_in('Phenylalanine Quantity', with: 0.5)
-    click_button('Submit Food')
+    create_food
     food = Food.first
     expect(food.name).to eq('chocolate')
     expect(food.food_quant).to eq(100)
