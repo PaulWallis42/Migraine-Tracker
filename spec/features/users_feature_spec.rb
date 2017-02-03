@@ -15,13 +15,10 @@ feature "User can sign in and out" do
   end
 
   context "user signed in on the homepage" do
+    include MigrainesHelper
+
     before do
-      visit('/')
-      click_link('Sign up')
-      fill_in('Email', with: 'test@example.com')
-      fill_in('Password', with: 'testtest')
-      fill_in('Password confirmation', with: 'testtest')
-      click_button('Sign up')
+      create_more_migraines
     end
 
     it "should see 'sign out' link" do
@@ -34,5 +31,13 @@ feature "User can sign in and out" do
       expect(page).not_to have_link('Sign in')
       expect(page).not_to have_link('Sign up')
     end
+
+    it "should only see signed in users migraines" do
+      visit('/')
+      expect(page).to have_content(100)
+      expect(page).to have_content(200)
+      expect(page).not_to have_content(300)
+    end
   end
+
 end

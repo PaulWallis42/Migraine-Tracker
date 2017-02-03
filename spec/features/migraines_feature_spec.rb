@@ -12,15 +12,14 @@ feature 'migraines' do
   context 'migraines have been recorded' do
     include MigrainesHelper
     before do
-      Migraine.create(date: '30/01/2017', severity: 10, phen_level: 100)
-      sign_up
+      sign_up_and_record_migraine
     end
 
     scenario 'should display a list of migraines' do
       visit '/migraines'
       expect(page).to have_content('30/01/2017')
       expect(page).to have_content(10)
-      expect(page).to have_content(100)
+      expect(page).to have_content(50)
       expect(page).to have_link('Record a Migraine')
       expect(page).not_to have_content('No Migraines Recorded')
       expect(current_path).to eq('/migraines')

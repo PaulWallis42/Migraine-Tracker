@@ -1,5 +1,6 @@
 
 <% if user_signed_in? %>
+
   <% if @migraines.any? %>
     <% @migraines.each do |migraine| %>
       <h3><%= "Migraine Date: #{migraine.date}" %></h2>
@@ -9,6 +10,7 @@
   <% else %>
     <h2>No Migraines Recorded</h2>
   <% end %>
+
   <%= link_to 'Record a Migraine', new_migraine_path %>
 
 <% else %>
