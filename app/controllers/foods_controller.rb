@@ -5,7 +5,10 @@ class FoodsController < ApplicationController
   end
 
   def create
-    Food.create(food_params)
+    if user_signed_in?
+      user = User.find(current_user.id)
+      user.foods.create(food_params)
+    end
     redirect_to '/migraines'
   end
 

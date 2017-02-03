@@ -1,9 +1,15 @@
 require 'rails_helper'
 
 feature 'foods' do
-  context 'can add foods' do
-    include MigrainesHelper
+  include MigrainesHelper
 
+  scenario 'can not add food unless signed in' do
+    visit('/')
+    expect(page).to have_content('Sign in to record meals')
+    expect(page).not_to have_link('Log a Meal')
+  end
+
+  context 'can add foods' do
     scenario 'user can create food entries' do
       sign_up
       visit('/')
