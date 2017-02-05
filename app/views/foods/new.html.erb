@@ -1,9 +1,30 @@
-<%= form_for @food do |f| %>
-  <%= f.label :name, "Food" %>
-  <%= f.text_field :name, placeholder: "Cheese"%>
-  <%= f.label :food_quant, "Quantity" %>
-  <%= f.text_field :food_quant, placeholder: "grams"%>
-  <%= f.label :phen_quant, "Phenylalanine Quantity" %>
-  <%= f.text_field :phen_quant, placeholder: "grams" %>
-  <%= f.submit "Submit Food" %>
-<% end %>
+
+
+  <%= form_for @food do |f| %> <!-- id = new_food -->
+    <%= f.label :name, "Food" %>
+    <%= f.text_field :name, placeholder: "Cheese" %> <!-- id = food_name -->
+    <%= f.label :food_quant, "Quantity" %>
+    <%= f.text_field :food_quant, placeholder: "grams" %> <!-- id = food_food_quant -->
+    <%= f.label :phen_quant, "Phenylalanine Quantity" %>
+    <%= f.text_field :phen_quant, placeholder: "grams" %> <!-- id = food_phen_quant -->
+    <%= f.submit "Submit Food" %>
+  <% end %>
+
+    <form id='groups_form'>
+      <label>Please select food type:</label>
+      <select id='groups_select'></select>
+    </form>
+
+    <form id="find_food">
+      <label>Enter a food keyword:</label>
+      <input type="text" id="find_food_field">
+      <input type="submit" id="find_food_submit">
+    </form>
+
+    <form id='choose_from_list'>
+      <label>Choose the closest match:</label>
+      <select id="foods"></select>
+      <label>Enter food quantity in grams:</label>
+      <input type='number' id='food_weight'>
+      <input type="submit" value="Submit" id='select_food'>
+    </form>
