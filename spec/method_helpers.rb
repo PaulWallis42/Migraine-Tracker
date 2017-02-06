@@ -26,5 +26,5 @@ end
 
 def create_food
   click_link('Log a Meal')
-  
+
 end

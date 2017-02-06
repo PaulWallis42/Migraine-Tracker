@@ -21,7 +21,7 @@ feature 'foods' do
     end
   end
 
-  scenario 'foods are saved to the database', js: true do
+  scenario 'foods are saved to the database' do
     sign_up
     create_food
     food = Food.first
