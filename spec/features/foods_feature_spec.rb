@@ -28,4 +28,12 @@ feature 'foods' do
     expect(food.name).to eq('Cheese, cheddar')
     expect(food.phen_quant).to eq(2.15)
   end
+
+  scenario 'running total of phen level is recorded', js: true do
+    sign_up
+    create_food
+    create_food
+    food = User.first.foods.last
+    expect(food.phen_run_total).to eq(4.30)
+  end
 end
