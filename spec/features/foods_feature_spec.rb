@@ -14,19 +14,18 @@ feature 'foods' do
       expect(page).to have_link('Log a Meal')
     end
 
-    scenario 'users can fill in foods form' do
+    scenario 'users can fill in foods form', js: true do
       sign_up
       create_food
       expect(current_path).to eq('/migraines')
     end
   end
 
-  scenario 'foods are saved to the database' do
+  scenario 'foods are saved to the database', js: true do
     sign_up
     create_food
     food = Food.first
-    expect(food.name).to eq('chocolate')
-    expect(food.food_quant).to eq(100)
-    expect(food.phen_quant).to eq(0.5)
+    expect(food.name).to eq('Cheese, cheddar')
+    expect(food.phen_quant).to eq(2.15)
   end
 end
