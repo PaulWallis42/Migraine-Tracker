@@ -26,5 +26,10 @@ end
 
 def create_food
   click_link('Log a Meal')
-
+  select('Dairy & Egg', from: 'groups_select')
+  fill_in('find_food_field', with: 'cheese')
+  click_button('find_food_submit')
+  select('Cheese, cheddar', from: 'foods')
+  fill_in('food_weight', with: 200)
+  click_button('select_food')
 end
