@@ -3,15 +3,14 @@ require 'rails_helper'
 feature 'foods' do
   scenario 'can not add food unless signed in' do
     visit('/')
-    expect(page).to have_content('Record a meal')
-    expect(page).not_to have_link('Log a Meal')
+    expect(page).not_to have_link('Record a Meal')
   end
 
   context 'can add foods' do
     scenario 'user can create food entries' do
       sign_up
       visit('/')
-      expect(page).to have_link('Log a Meal')
+      expect(page).to have_link('Record a Meal')
     end
 
     scenario 'users can fill in foods form', js: true do

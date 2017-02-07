@@ -33,7 +33,7 @@ feature "User can sign in and out" do
     end
 
     it "should only see signed in users migraines" do
-      visit('/')
+      visit('/migraines')
       expect(page).to have_content(100)
       expect(page).to have_content(200)
       expect(page).not_to have_content(300)

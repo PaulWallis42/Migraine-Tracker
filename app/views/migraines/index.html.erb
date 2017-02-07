@@ -1,29 +1,15 @@
   <% if user_signed_in? %>
-
     <% if @migraines.any? %>
       <% @migraines.each do |migraine| %>
-      <div class='container'>
-        <p><%= "Migraine Date: #{migraine.date}" %></p>
-        <p><%= "Migraine Severity: #{migraine.severity}"%></p>
-        <p><%= "Phenylalanine Level: #{migraine.phen_level} grams"%></p>
-      </div>
-      <% end %>
+        <div class='container'>
+          <p><%= "Migraine Date: #{migraine.date}" %></p>
+          <p><%= "Migraine Severity: #{migraine.severity}"%></p>
+          <p><%= "Phenylalanine Level: #{migraine.phen_level} grams"%></p>
+        </div>
+        <% end %>
     <% else %>
-    <div class='container'>
-      <h2>No Migraines Recorded</h2>
-    </div>
+        <div class='container'>
+          <h2>No Migraines Recorded</h2>
+        </div>
     <% end %>
-  <div class='container'>
-    <%= link_to 'Record a Migraine', new_migraine_path %>
-    <%= link_to 'Log a Meal', new_food_path %>
-  </div>
-  <% else %>
-  <div class='container'>
-      <h4>Sign in to:</h4>
-      <ul>
-        <li>Record a meal</li>
-        <li>Record a migraine</li>
-        <li>View your migraine history</li>
-      </ul>
-    </div>
   <% end %>

@@ -1,5 +1,5 @@
 def sign_up
-  visit('/migraines')
+  visit('/')
   click_link('Sign up')
   fill_in('Email', with: 'test@example.com')
   fill_in('Password', with: 'testtest')
@@ -25,7 +25,7 @@ def create_more_migraines
 end
 
 def create_food
-  click_link('Log a Meal')
+  click_link('Record a Meal')
   select('Dairy & Egg', from: 'groups_select')
   fill_in('find_food_field', with: 'cheese')
   click_button('find_food_submit')

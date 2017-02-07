@@ -12,6 +12,8 @@ require 'method_helpers'
 require 'capybara/poltergeist'
 require 'database_cleaner'
 Capybara.javascript_driver = :poltergeist
+Capybara.default_max_wait_time = 30
+
 
 DatabaseCleaner.strategy = :truncation
 
