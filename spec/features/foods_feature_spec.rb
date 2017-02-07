@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'foods' do
   scenario 'can not add food unless signed in' do
     visit('/')
-    expect(page).to have_content('Sign in to record meals')
+    expect(page).to have_content('Record a meal')
     expect(page).not_to have_link('Log a Meal')
   end
 

@@ -4,7 +4,8 @@ feature 'migraines' do
   context 'no migraines have been recorded' do
     scenario 'should display a prompt to record a migraine' do
       visit '/migraines'
-      expect(page).to have_content 'Sign in to record and view migraines'
+      expect(page).to have_content 'Sign in to:'
+      expect(page).to have_content 'Record a meal'
     end
   end
 
