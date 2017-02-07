@@ -10,7 +10,7 @@ $(document).ready(function(){
   });
 
   function getListOfNutrients(){
-    var url = "http://api.nal.usda.gov/ndb/nutrients/"
+    var url = "//api.nal.usda.gov/ndb/nutrients/"
     var params = "?format=json&max=1500&"
     var apiKey = "&api_key=jN1zCCJEqMHOiOY57WmAN7PXDxCVqD1hGIrrAGIN&nutrients=508"
 
