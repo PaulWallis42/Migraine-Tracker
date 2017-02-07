@@ -34,6 +34,6 @@ feature 'foods' do
     create_food
     create_food
     food = User.first.foods.last
-    expect(food.phen_run_total).to eq(4.30)
+    expect(food.phen_run_total).to eq(4.3)
   end
 end

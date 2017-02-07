@@ -14,7 +14,13 @@ class MigrainesController < ApplicationController
   def create
     if user_signed_in?
       user = User.find(current_user.id)
-      user.migraines.create(migraine_params)
+      running_phen_from_food = user.foods.last.phen_run_total
+      new_migraine = user.migraines.new(migraine_params)
+      new_migraine.phen_level = running_phen_from_food
+      new_migraine.save
+      food_record = user.foods.last
+      food_record.phen_run_total = 0
+      food_record.save
     end
     redirect_to '/migraines'
   end
