@@ -5,6 +5,7 @@ $(document).ready(function(){
     myNameSpace.portionWeight = $('#food_weight').val();
     myNameSpace.phenyPer100g = selectFoodFromFilter().nutrients[0].gm;
     upDateFormValues();
+    alert('Food logged successfully');
   });
 
   function selectFoodFromFilter(){
