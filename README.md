@@ -1,7 +1,5 @@
 # The Migraine Tracker
 
-[![Build Status](https://travis-ci.org/PaulWallis42/Migraine-Tracker.svg?branch=master)](https://travis-ci.org/PaulWallis42/Migraine-Tracker)
-
 A basic migraine tracking app allowing users to record details of their diet and migraine attacks.  Food nutrient details are obtained through an RESTful API to the United States department of Agricultures database.
 
 ![landing page](/app/assets/images/readme.png)
