@@ -1,4 +1,4 @@
-<div class='container'>
+<div class='container rec-meal'>
     <form id='groups_form'>
       <label>Please select food type:</label>
       <select id='groups_select'></select>
@@ -14,8 +14,10 @@
       <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
       <label>Choose the closest match:</label>
       <select id="foods"></select>
+      <br>
       <label>Enter food quantity in grams:</label>
-      <input type='number' id='food_weight'>
+      <input type='number' id='food_weight' placeholder="eg 100">
+      <br>
       <input type='hidden' id='name' name='name'>
       <input type='hidden' id='food_quant' name='food_quant'>
       <input type='hidden' id='phen_quant' name='phen_quant'>

@@ -1,6 +1,6 @@
 .navbar {
   margin-bottom: 30px;
-  background-color: lightblue;
+  background: rgba(179, 255, 179, 0.75);
 }
 
 .migraines {
@@ -17,7 +17,7 @@
 }
 
 .home-text {
-  color: lightyellow;
+  color: white;
   float: right;
   margin-right: 100px;
 }
@@ -30,8 +30,20 @@
   margin-top: 5%;
 }
 
+.rec-mig {
+  margin-top: 5%;
+}
+
+.rec-meal {
+  margin-top: 5%;
+}
 .no-recorded {
-  color: lightyellow;
+  color: white;
   float: right;
   margin-right: 100px;
+}
+
+.other-home {
+  color: black;
+  margin-top: 5%;
 }

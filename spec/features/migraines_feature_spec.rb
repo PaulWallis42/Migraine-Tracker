@@ -41,7 +41,7 @@ feature 'migraines' do
       click_link 'Record a Migraine'
       fill_in 'Date', with: '01/01/2017'
       select(5, from: 'Severity')
-      click_button 'Record Migraine'
+      click_button 'Submit Migraine'
       expect(page).to have_content('01/01/2017')
       expect(page).to have_content(5)
       expect(current_path).to eq('/migraines')
@@ -56,7 +56,7 @@ feature 'migraines' do
       click_link 'Record a Migraine'
       fill_in 'Date', with: '04/01/2017'
       select 3, from: 'Severity'
-      click_button 'Record Migraine'
+      click_button 'Submit Migraine'
       expect(page).to have_content(4.3)
       user = User.find_by email: 'test@example.com'
       expect(user.foods.last.phen_run_total).to eq(0)
