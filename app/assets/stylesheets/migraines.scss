@@ -1,3 +1,37 @@
-// Place all the styles related to the migraines controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar {
+  margin-bottom: 30px;
+  background-color: lightblue;
+}
+
+.migraines {
+  background-color: lightgreen;
+  margin-bottom: 5px;
+  opacity: 0.8;
+}
+
+.home-page {
+  background-image: url('migraine-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.home-text {
+  color: lightyellow;
+  float: right;
+  margin-right: 100px;
+}
+
+.sign_up_form  {
+  margin-top: 5%;
+}
+
+.sign_in_form {
+  margin-top: 5%;
+}
+
+.no-recorded {
+  color: lightyellow;
+  float: right;
+  margin-right: 100px;
+}

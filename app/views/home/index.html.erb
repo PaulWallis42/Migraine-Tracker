@@ -1,9 +1,9 @@
-<div class='container'>
+<div class='home-text'>
   <% if user_signed_in? %>
     <h5><%= "Welcome #{User.find(current_user.id).email} to 'The Migraine Tracker' " %></h5>
   <% else %>
-  <h1>Welcome to 'The Migraine Tracker'</h1>
-  <div class='container'>
+  <div class='container other-home'>
+  <h2>'The Migraine Tracker'</h2>
       <h4>Sign in to:</h4>
       <ul>
         <li>Record a meal</li>
